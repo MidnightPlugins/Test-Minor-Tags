@@ -1,0 +1,8 @@
+Test Minor Tags
+
+This plugin contains two jobs. One tests whether missions with the minor tag can start. The other blocks missions with the minor tag from starting.
+
+This is only a tool for detecting if the active plugins/PRs contain repeating missions that block missions with the minor tag.
+
+Get the latest version here:
+https://github.com/MidnightPlugins/Test-Minor-Tags/releases
