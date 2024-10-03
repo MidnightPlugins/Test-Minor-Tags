@@ -17,6 +17,8 @@ mission "00 TEST MINOR TAGS"
 	description "While this job is active, depart, land, then visit a spaceport to see if missions with the minor tag can start with currently active plugins/PRs. If a message doesn't appear to confirm this, try again. If it still doesn't, deactivate all but one plugin/PR and check for each one."
 	job
 	repeat
+	to offer
+		not "00 TEST MINOR TAGS: active"
 	to complete
 		never
 
@@ -33,7 +35,7 @@ mission "zz test minor tags"
 
 			`If you can see this message while visiting the spaceport, this confirms that missions with the minor tag can start with the currently active plugins.`
 
-			`	The "00 TEST MINOR TAGS" job will automatically clear the next time you land (or you can abort it from the missions list if you prefer).`
+			`	The "00 TEST MINOR TAGS" job will automatically clear the next time you land (or you can abort it from the missions list if you prefer). It will reappear on the job board the next time you land while that job is not active.`
 				decline
 
 
@@ -44,6 +46,8 @@ mission "00 BLOCK MINOR TAGS"
 	description "While this job is active, missions with the minor tag won't be able to fire. This is for demonstration purposes only. Abort this job to end this diagnostic effect."
 	job
 	repeat
+	to offer
+		not "00 BLOCK MINOR TAGS: active"
 	to complete
 		never
 
@@ -57,7 +61,7 @@ mission "zz block minor tags"
 		conversation
 			scene "scene/engine"
 
-			`If this message pops up when you land, missions with the minor tag won't be able to fire. This is for demonstration purposes only. Abort the "00 BLOCK MINOR TAGS" job from your missions list to end this diagnostic effect.`
+			`If this message pops up when you land, missions with the minor tag won't be able to fire. This is for demonstration purposes only. Abort the "00 BLOCK MINOR TAGS" job from your missions list to end this diagnostic effect. It will reappear on the job board the next time you land while that job is not active.`
 			``
 			`	The Test Minor Tags plugin is only a tool to detect if missions with the minor tag are being blocked by repeating missions. Aborting the "00 BLOCK MINOR TAGS" job will not fix the underlying issue.`
 			``
