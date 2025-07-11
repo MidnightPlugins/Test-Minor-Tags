@@ -35,7 +35,7 @@ mission "zz test minor tags"
 
 			`If you can see this message while visiting the spaceport, this confirms that missions with the minor tag can start with the currently active plugins.`
 
-			`	The "AA TEST MINOR TAGS" job will automatically clear the next time you land (or you can abort it from the missions list if you prefer). It will reappear on the job board the next time you land while that job is not active.`
+			`	The "AA TEST MINOR TAGS" job will automatically clear the next time you land. It will reappear on the job board the next time you land while that job is not active.`
 				decline
 
 
